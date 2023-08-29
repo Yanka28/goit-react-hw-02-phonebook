@@ -10,13 +10,12 @@ export class ContactForm extends Component {
   handleChange = e => {
     const { name, value } = e.target;
     this.setState({ [name]: value });
-    console.log(this.state);
-    console.log(this.props.contacts);
   };
 
   handleSubmit = e => {
     e.preventDefault();
     const { name, number } = this.state;
+    
     const isExist = this.props.contacts.find(
       contact => contact.name === name || contact.number === number
     );
