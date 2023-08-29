@@ -1,5 +1,4 @@
 import { Filter } from './FilterContacts.styled';
-import PropTypes from 'prop-types';
 
 export const FilterContacts = ({ filter, handleChangeFilter }) => {
   return (
@@ -16,9 +15,4 @@ export const FilterContacts = ({ filter, handleChangeFilter }) => {
       />
     </Filter>
   );
-};
-
-FilterContacts.propTypes = {
-  filter: PropTypes.string.isRequired,
-  handleChangeFilter: PropTypes.func.isRequired,
 };
