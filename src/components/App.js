@@ -55,17 +55,12 @@ export class App extends Component {
         <FilterContacts
           filter={filter}
           handleChangeFilter={this.handleChangeFilter}
-          filterContacts={this.filterContacts}
         />
-        {!filter && (
-          <ContactsList contacts={contacts} onDelete={this.onDelete} />
-        )}
-        {filter && (
-          <ContactsList
-            contacts={this.getExistingContacts()}
-            onDelete={this.onDelete}
-          />
-        )}
+        <ContactsList
+          contacts={this.getExistingContacts()}
+          onDelete={this.onDelete}
+        />
+
         <GlobalStyle />
       </Layout>
     );
